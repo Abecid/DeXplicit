@@ -1,0 +1,213 @@
+{
+  "geometry": {
+    "shape": [
+      1,
+      35,
+      12000,
+      3
+    ],
+    "finite": true,
+    "learned_parameters": 425063158,
+    "export_tensors_bitwise_equal": 1451,
+    "training_step": {
+      "loss": -3.5605266094,
+      "gradient_norm": 87.289,
+      "finite_changed_tensors": 1427
+    }
+  },
+  "packaging": {
+    "cli_help_checks": 11,
+    "real_input_pack_roundtrip_numeric_exact": true,
+    "packaged_checkpoint_hash_checks": 4,
+    "packaged_config_load": true,
+    "wheel_resources_checked": true,
+    "installed_wheel_sha256": "9d1251ced209783255f9c38507dea4eea23ca383d658ab85a0b2ebbc200deaec",
+    "installed_wheel_real_controls_exact": true,
+    "local_wheel": {
+      "wheel": "dexplicit-0.1.0-py3-none-any.whl",
+      "bytes": 420317,
+      "sha256": "9d1251ced209783255f9c38507dea4eea23ca383d658ab85a0b2ebbc200deaec",
+      "files_matched_source": 119,
+      "internal_training_aliases": false
+    },
+    "public_downloader_fresh_download_verified": true
+  },
+  "limits": [
+    "Existing compatible CUDA environments were used; dependency installation on arbitrary hardware is not verified",
+    "One real predicted-3D end-to-end clip was checked; the full benchmark was not rerun",
+    "Fine-tuning starts fresh optimizer state; original staged campaigns are not replayed",
+    "The causal renderer and its timing claims are outside this release",
+    "Renamed and original 3D inference are not claimed bitwise equal; repeated original inference itself showed submillimetre variation"
+  ],
+  "video_compact": {
+    "rgb_shape": [
+      33,
+      480,
+      832,
+      3
+    ],
+    "seed": 17,
+    "sampling_steps": 30,
+    "cfg": 5,
+    "trainable_parameters": 29691104,
+    "native_same_runtime_latents_exact": true,
+    "maximum_latent_difference": 0.0,
+    "training_step": {
+      "loss": 0.04919086769,
+      "gradient_norm": 0.041035477,
+      "finite_changed_tensors": 337
+    }
+  },
+  "huggingface": {
+    "revision": "572265e1d8d1e13c6c000115dd8a8bf3b113fea2",
+    "download_revision": "91e96201c0bfdff7f70f645ed3f036080f158a9d",
+    "private": true,
+    "files": [
+      {
+        "file": "dexplicit-3d-model.safetensors",
+        "bytes": 1700451041,
+        "sha256": "ddc22c63d845e2594d99686eb648e7f6c793279ea1a52b426ad036e3053310f4"
+      },
+      {
+        "file": "dexplicit-renderer-compact.safetensors",
+        "bytes": 118805968,
+        "sha256": "9526de55f9faa1688b4c66b59e5de95223b001ec607e374b6db55dd0301ac688"
+      },
+      {
+        "file": "dexplicit-renderer-high.safetensors",
+        "bytes": 61360760,
+        "sha256": "67d72e0b9bc190a9487cfe40a4fe8ab9456610f14ed0c8d5f324ade814e7456c"
+      },
+      {
+        "file": "dexplicit-renderer-low.safetensors",
+        "bytes": 61360760,
+        "sha256": "37d5e1e26ba9d9c945c0f1db0c39b8a1430829dc76c93d414f18eb3959f426ad"
+      }
+    ],
+    "metadata_matches": true,
+    "metadata_byte_matches": [
+      "README.md",
+      "checkpoints.json",
+      "dexplicit-3d-config.json",
+      "SHA256SUMS"
+    ]
+  },
+  "renderer": {
+    "rgb_shape": [
+      33,
+      480,
+      832,
+      3
+    ],
+    "seed": 17,
+    "sampling_steps": 30,
+    "cfg": 5,
+    "expert_boundary": 0.875,
+    "sigma_shift": 5,
+    "predicted_3d_end_to_end": true,
+    "geometry_output_shape": [
+      1,
+      35,
+      12000,
+      3
+    ],
+    "sample": "one real PhysTwin cloth sequence",
+    "native_controls": {
+      "all_33_frames_exact_native_raster": true,
+      "all_33_masks_exact": true,
+      "predicted_point_positions_modified": false
+    },
+    "cpu_interface_tests": 13,
+    "training_steps": {
+      "high": {
+        "step": 1,
+        "loss": 0.013738918118178844,
+        "gradient_norm": 0.035886604338884354,
+        "schema_verified": true,
+        "finite_tensors": 160,
+        "changed_tensors": 160,
+        "dtypes": [
+          "torch.float32"
+        ]
+      },
+      "low": {
+        "step": 1,
+        "loss": 0.03761795535683632,
+        "gradient_norm": 0.045259989798069,
+        "schema_verified": true,
+        "finite_tensors": 160,
+        "changed_tensors": 160,
+        "dtypes": [
+          "torch.float32"
+        ]
+      }
+    },
+    "video_sha256": "26903615ddcd1e5f7ec81c9f58bd89db842de4968e2940307c2cc6f791269ac7",
+    "frames_decoded_and_visually_inspected": 33,
+    "visual_observation": "Decoded scene and hand motion are coherent, but the hand separates from the cloth. This is a functional integration check, not benchmark or contact-accuracy evidence.",
+    "conditioning_source": "predicted_3d",
+    "training_conditioning_source": "predicted_3d",
+    "existing_checkpoint_training_conditioning": "measured_3d"
+  },
+  "upstream_renderer": {
+    "revision": "4438caabbfdd7437bbb0283d86cb200d1b7223ba",
+    "files": [
+      {
+        "file": "high_noise_model/diffusion_pytorch_model.safetensors",
+        "sha256": "66c61b736c5674deeeef17861e494d3652cc9b1463a9656bf18c2c72d2c5f007",
+        "passed": true
+      },
+      {
+        "file": "low_noise_model/diffusion_pytorch_model.safetensors",
+        "sha256": "0bf791adfb8330d451d2f5c03577b2a8fb780453f8ef05e23a8fa91f27a2134d",
+        "passed": true
+      },
+      {
+        "file": "models_t5_umt5-xxl-enc-bf16.pth",
+        "sha256": "7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d",
+        "passed": true
+      },
+      {
+        "file": "Wan2.1_VAE.pth",
+        "sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981",
+        "passed": true
+      }
+    ]
+  },
+  "verified_at": "2026-10-15",
+  "models": {
+    "3d": "DeXplicit 3D model",
+    "renderer": "DeXplicit renderer"
+  },
+  "predicted_training": {
+    "training_steps": {
+      "high": {
+        "step": 1,
+        "loss": 0.013738918118178844,
+        "gradient_norm": 0.035886604338884354,
+        "schema_verified": true,
+        "finite_tensors": 160,
+        "changed_tensors": 160,
+        "dtypes": [
+          "torch.float32"
+        ]
+      },
+      "low": {
+        "step": 1,
+        "loss": 0.03761795535683632,
+        "gradient_norm": 0.045259989798069,
+        "schema_verified": true,
+        "finite_tensors": 160,
+        "changed_tensors": 160,
+        "dtypes": [
+          "torch.float32"
+        ]
+      }
+    },
+    "conditioning_source": "predicted_3d",
+    "diagnostic_fixture_only": true,
+    "smoke_update_replaces_release_weights": false,
+    "bundle_sha256": "b350e2094334c122452d6395c723eb71c5af9fe860d7c245079ef8dcee3c7478",
+    "conditioning_receipt_sha256": "4c092a9ca4a6aedc1a7e60ca91362f51127f83892dc36e10d2c068fbc5d35674"
+  }
+}

@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+
+name: pointworld-env
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+# This file only creates the Python shell of the environment.
+# Install packages in this order after conda env creation:
+#   python -m pip install --index-url https://pypi.org/simple --upgrade pip setuptools wheel
+#   python -m pip install --index-url https://download.pytorch.org/whl/cu121 torch==2.5.1+cu121 torchvision==0.20.1+cu121
+#   python -m pip install --no-index --find-links https://data.pyg.org/whl/torch-2.5.1+cu121.html torch-scatter==2.1.2+pt25cu121 --no-deps
+#   python -m pip install --index-url https://pypi.org/simple numpy==2.2.6 ninja==1.11.1.4 packaging==24.2 pybind11==2.13.6 requests==2.32.4 fire==0.7.1 termcolor==3.1.0 lark==1.2.2 portalocker==3.2.0 sympy==1.13.1 mpmath==1.3.0 ccimport==0.4.4 pccm==0.4.16
+#   python -m pip install --index-url https://pypi.org/simple cumm-cu121==0.7.11 --no-deps
+#   python -m pip install --index-url https://pypi.org/simple spconv-cu121==2.3.8 --no-deps
+#   python -m pip install --index-url https://pypi.org/simple -r environments/requirements.txt
+#   python -m pip install --index-url https://pypi.org/simple timm==1.0.19 --no-deps
+#   FLASH_ATTN_ABI="$(python - <<'PY'
+#   import torch
+#   print("TRUE" if torch._C._GLIBCXX_USE_CXX11_ABI else "FALSE")
+#   PY
+#   )"
+#   python -m pip install --index-url https://pypi.org/simple "https://github.com/Dao-AILab/flash-attention/releases/download/v2.7.4.post1/flash_attn-2.7.4.post1+cu12torch2.5cxx11abi${FLASH_ATTN_ABI}-cp310-cp310-linux_x86_64.whl"

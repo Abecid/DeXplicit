@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+third_party/
+weights/
+data/
+runs/
+wandb/
+*.safetensors
+*.pt
+*.pth
+*.npz
+.DS_Store
+*.egg-info/
+build/
+dist/
+.venv-*/

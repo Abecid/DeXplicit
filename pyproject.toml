@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dexplicit"
+version = "0.1.0"
+description = "Explicit physical state for dexterous manipulation world models"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0 (code)"}
+dependencies = ["numpy>=2.2,<3", "safetensors>=0.4", "torch>=2.5,<2.6", "einops>=0.8", "pillow>=10", "pyyaml>=6", "addict>=2.4", "timm>=1.0"]
+
+[project.optional-dependencies]
+video = ["huggingface-hub>=0.25", "imageio>=2.35", "imageio-ffmpeg>=0.5", "modelscope", "peft", "transformers", "accelerate", "sentencepiece", "opencv-python-headless>=4.10"]
+train = ["wandb>=0.21"]
+
+[tool.setuptools]
+py-modules = ["scene_featurizer", "robot_sampler", "transform_utils", "utils", "arguments"]
+
+[tool.setuptools.packages.find]
+include = ["dexplicit*", "training*", "dataset_components*", "pointworld*", "ptv3*"]
+
+[tool.setuptools.package-data]
+dexplicit = ["resources/*.json"]
+ptv3 = ["*.yaml", "LICENSE"]

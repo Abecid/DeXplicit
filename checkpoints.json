@@ -1,0 +1,91 @@
+{
+  "release": "v0.1.0",
+  "models": {
+    "3d-model": {
+      "file": "dexplicit-3d-model.safetensors",
+      "sha256": "ddc22c63d845e2594d99686eb648e7f6c793279ea1a52b426ad036e3053310f4",
+      "bytes": 1700451041,
+      "parameters": 425063158,
+      "source_checkpoint_sha256": "6481abd8995dd2b6378e9af1fa755bdb758e695fb11d7fdc757b53621f9a883b",
+      "optimizer_step": 25600,
+      "format": "full model state, no optimizer",
+      "config": "configs/geometry.json",
+      "name": "DeXplicit 3D model",
+      "variant": "3D"
+    },
+    "renderer-compact": {
+      "file": "dexplicit-renderer-compact.safetensors",
+      "sha256": "9526de55f9faa1688b4c66b59e5de95223b001ec607e374b6db55dd0301ac688",
+      "bytes": 118805968,
+      "parameters": 29691104,
+      "source_checkpoint_sha256": "044137fe46c508ee325d943c1f4fe918924705c129d57bdff6644c69ab300608",
+      "update": 1155,
+      "format": "trainable adapter parameters only",
+      "base_model": "Wan-AI/Wan2.1-VACE-1.3B",
+      "base_revision": "574e6a744642ce3bee319afc31496b88bde8aac4",
+      "backend_revision": "ce9f4541d0f4ae47a138337e59066dd633207aa7",
+      "steps": 30,
+      "cfg": 5.0,
+      "seed": 17,
+      "role": "optional compact renderer",
+      "name": "DeXplicit renderer",
+      "variant": "compact",
+      "training_condition_source": "measured_3d"
+    },
+    "renderer-high": {
+      "file": "dexplicit-renderer-high.safetensors",
+      "sha256": "67d72e0b9bc190a9487cfe40a4fe8ab9456610f14ed0c8d5f324ade814e7456c",
+      "bytes": 61360760,
+      "optimizer_step": 3264,
+      "format": "rank-32 VACE LoRA adapter",
+      "base_model": "alibaba-pai/Wan2.2-VACE-Fun-A14B",
+      "base_revision": "4438caabbfdd7437bbb0283d86cb200d1b7223ba",
+      "backend_revision": "ce9f4541d0f4ae47a138337e59066dd633207aa7",
+      "steps": 30,
+      "cfg": 5.0,
+      "seed": 17,
+      "sigma_shift": 5.0,
+      "expert_boundary": 0.875,
+      "training_timestep_index_bounds": [
+        0,
+        0.358
+      ],
+      "parameters": 30670848,
+      "tensors": 160,
+      "name": "DeXplicit renderer",
+      "variant": "high-noise expert",
+      "training_condition_source": "measured_3d"
+    },
+    "renderer-low": {
+      "file": "dexplicit-renderer-low.safetensors",
+      "sha256": "37d5e1e26ba9d9c945c0f1db0c39b8a1430829dc76c93d414f18eb3959f426ad",
+      "bytes": 61360760,
+      "optimizer_step": 3264,
+      "format": "rank-32 VACE LoRA adapter",
+      "base_model": "alibaba-pai/Wan2.2-VACE-Fun-A14B",
+      "base_revision": "4438caabbfdd7437bbb0283d86cb200d1b7223ba",
+      "backend_revision": "ce9f4541d0f4ae47a138337e59066dd633207aa7",
+      "steps": 30,
+      "cfg": 5.0,
+      "seed": 17,
+      "sigma_shift": 5.0,
+      "expert_boundary": 0.875,
+      "training_timestep_index_bounds": [
+        0.358,
+        1
+      ],
+      "parameters": 30670848,
+      "tensors": 160,
+      "name": "DeXplicit renderer",
+      "variant": "low-noise expert",
+      "training_condition_source": "measured_3d"
+    }
+  },
+  "huggingface_repo": "Abecid/DeXplicit",
+  "huggingface_revision": "91e96201c0bfdff7f70f645ed3f036080f158a9d",
+  "default_models": [
+    "3d-model",
+    "renderer-high",
+    "renderer-low"
+  ]
+}

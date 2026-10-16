@@ -1,0 +1,34 @@
+{
+  "assets": [
+    {
+      "file": "demo.png",
+      "sha256": "25f706e5b595935e969b71b979e17cec230c55308e7ef2d728360bbe031cc22a",
+      "bytes": 834155
+    },
+    {
+      "file": "method.png",
+      "sha256": "fa28495a648f678377e041faaeda23f98cac0a5ce201bb30f697ce22ea5732bd",
+      "bytes": 1170846
+    },
+    {
+      "file": "method.pdf",
+      "sha256": "2cacd8c5d8d2ea88779dc2288775415bab0c0f37dae96ca27606d3ea9ffb637a",
+      "bytes": 642543
+    },
+    {
+      "file": "predicted-3d.png",
+      "sha256": "e1542d31b657cc38844b289c9165b4c7c853b49883af0468d674363701bd61d6",
+      "bytes": 1203197
+    },
+    {
+      "file": "predicted-3d.mp4",
+      "sha256": "c5ddd43b0c37dc6aec1aa8e4b8b4e6009d4437bcdc935b4d71b5581e8ffd5f16",
+      "bytes": 4895780
+    },
+    {
+      "file": "predicted-3d-provenance.json",
+      "sha256": "d97039b66b61a4590e54136c9e24dd7017decdcb338b5758a085efb764f6b699",
+      "bytes": 28406
+    }
+  ]
+}
