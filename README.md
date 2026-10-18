@@ -8,10 +8,10 @@
 [Mutian Xu](https://mutianxu.github.io/)<sup>2,†</sup>,
 [Yukang Cao](https://yukangcao.github.io/)<sup>2</sup>,
 [Shulin Tian](https://shulin16.github.io/)<sup>2</sup>,
-[Ziwei Liu](https://liuziwei7.github.io/)<sup>2</sup>
+[Ziwei Liu](https://liuziwei7.github.io/)<sup>2,‡</sup>
 
 <sup>1</sup>University of California, Berkeley · <sup>2</sup>Nanyang Technological University<br>
-<sup>†</sup>Project Lead
+<sup>†</sup>Project Lead · <sup>‡</sup>Corresponding Author
 
 **[Project page](https://dexplicit.github.io/) · [Weights](https://huggingface.co/Abecid/DeXplicit) · [Models](#models)**
 
