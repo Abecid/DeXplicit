@@ -14,7 +14,7 @@
 <sup>*</sup>Work done during an internship at S-Lab.<br>
 <sup>†</sup>Project Lead · <sup>‡</sup>Corresponding Author
 
-**[Project page](https://dexplicit.github.io/) · [Weights](https://huggingface.co/Abecid/DeXplicit) · [Models](#models)**
+**[Paper](https://arxiv.org/abs/2610.30781) · [Project page](https://dexplicit.github.io/) · [Weights](https://huggingface.co/Abecid/DeXplicit) · [Models](#models)**
 
 **Predict object response in metric 3D, then render its visual consequences.**
 
